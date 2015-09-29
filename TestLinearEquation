@@ -1,0 +1,35 @@
+//u10016008_林亞璇
+
+import java.util.Scanner;
+
+public class TestLinearEquation {
+	public static void main(String[] args) {
+		
+		//for user input 
+		Scanner input = new Scanner(System.in);
+		System.out.print("Please enter a,b,c,d,e,f: ");
+		
+		//get user's input
+		double a = input.nextDouble();
+		double b = input.nextDouble();
+		double c = input.nextDouble();
+		double d = input.nextDouble();
+		double e = input.nextDouble();
+		double f = input.nextDouble();
+		
+		//construct class LinearEquation
+		LinearEquation linear = new LinearEquation(a,b,c,d,e,f);
+		
+		//分母不得為0否則無意義
+		if ((a * d - b * c) == 0) {
+			System.out.println("The equation has no solution.");
+		}
+		
+		//print solution
+		else {
+			System.out.println("The solutions are: ");
+			System.out.println("X = " + linear.getX());
+			System.out.println("Y = " + linear.getY());
+		}
+	}
+}
