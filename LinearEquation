@@ -1,0 +1,65 @@
+//u10016008_林亞璇
+
+class LinearEquation {
+	
+	//private data fields
+	private double a;
+	private double b;
+	private double c;
+	private double d;
+	private double e;
+	private double f;
+	
+	//constructor with arguments
+	public LinearEquation(double newA, double newB, double newC, double newD, double newE, double newF) {
+		a = newA;
+		b = newB;
+		c = newC;
+		d = newD;
+		e = newE;
+		f = newF;
+	}
+	
+	//get methods for a,b,c,d,e,f
+	double getA() {
+		return a;
+	}
+	
+	double getB() {
+		return b;
+	}
+	
+	double getC(){
+		return c;
+	}
+	
+	double getD() {
+		return d;
+	}
+	
+	double getE() {
+		return e;
+	}
+	
+	double getF() {
+		return f;
+	}
+	
+	//method isSolvable() using boolean type
+	private boolean isSolvable() {
+		if((a * d - b * c) != 0)
+			return true;
+		else{
+			return false;
+		}
+	}	
+	
+	//solutions for equation
+	double getX() {
+		return ((e * d - b * f) / (a * d - b * c));
+	}
+	
+	double getY() {
+		return ((a * f - e * c) / (a * d - b * c));
+	}
+}  
